@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="cev-02.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Media Query</title>
+</head>
+<body>
+    <header>
+        <h1>Media Queries em CSS</h1>
+        <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()"> menu </span>
+        <menu id="imenu">
+            <ul>
+                <li><a href="#">Opção 1</a></li>
+                <li><a href="#">Opção 2</a></li>
+                <li><a href="#">Opção 3</a></li>
+                <li><a href="#">Opção 4</a></li>
+                <li><a href="#">Opção 5</a></li>
+            </ul>
+        </menu>
+    </header>
+    <main>
+        <article>
+            <h2>Conhecendo Media Queries em CSS</h2>
+            <p>
+                Consultas de mídia são um recurso do CSS 3 que permite que a renderização do conteúdo se adapte a diferentes condições, como resolução da tela (por exemplo, tamanho da tela do celular e do desktop). Tornou-se um padrão recomendado pelo W3C em junho de 2012, e é uma tecnologia fundamental de web design responsivo (RWD).
+                As consultas de mídia foram esboçadas pela primeira vez na proposta inicial de CSS de Håkon Wium Lie em 1994, mas não se tornaram parte do CSS 1.
+            <p>
+                A Recomendação HTML4 de 1997 mostra um exemplo de como as consultas de mídia poderiam ser adicionadas no futuro. Em 2000, o W3C começou a trabalhar em consultas de mídia e também em outro esquema para suporte a vários dispositivos: CC/PP . Os dois abordam o mesmo problema, mas o CC/PP é centrado no servidor, enquanto as consultas de mídia são centradas no navegador. O primeiro rascunho de trabalho público para consultas de mídia foi publicado em 2001. Media Queries Nível 3, publicado como uma recomendação candidata em 27 de julho de 2010, tornou-se uma recomendação do W3C em 19 de junho de 2012. As correções propostas foram publicadas em 5 de abril. 2022.
+            </p>
+            <p>
+            Media Queries Level 4, publicado como um rascunho de trabalho em 9 de maio de 2017, era um rascunho de recomendação de candidato do W3C em 25 de dezembro de 2021.
+            </p>
+
+            <p>Uma consulta de mídia consiste em um tipo de mídia e uma ou mais expressões, envolvendo recursos de mídia , que são resolvidas como verdadeiras ou falsas. O resultado da consulta será verdadeiro se o tipo de mídia especificado na consulta de mídia corresponder ao tipo de dispositivo no qual o documento está sendo exibido e todas as expressões na consulta de mídia forem verdadeiras. Quando uma consulta de mídia é verdadeira, a folha de estilos ou regras de estilo correspondentes são aplicadas, seguindo as regras normais em cascata. Consultas de mídia usam o CSS "at-rule".</p>
+
+            <p>Exemplos:</p>
+                
+                <p>A seguir estão exemplos de consultas de mídia CSS:</p>
+
+                <p>@ media screen and ( display-mode : fullscreen ) { /* O código aqui se aplica apenas a telas em tela cheia */ }</p>     
+                  
+                
+                <p>@ media all and ( orientation : Landscape ) { /* O código aqui só se aplica na orientação paisagem */ }</p>     
+                  
+                
+                <p>@ media screen and ( min-device-width : 500px ) { /* O código aqui se aplica apenas a telas iguais ou maiores que 500 pixels de largura */ }</p>
+
+                <p>Tipos de mídia</p>
+                <p>
+                Um tipo de mídia pode ser declarado no cabeçalho de um documento HTML usando o atributo “media” dentro de um elemento. O valor do atributo "media" especifica em qual dispositivo o documento vinculado será exibido. [10] Os tipos de mídia também podem ser declarados nas instruções de processamento XML , at-rule e at-rule. CSS 2 define o seguinte como tipos de mídia: <link>@import@media</p>
+                
+                
+                &raquo; todos (adequado para todos os dispositivos) <br>
+                &raquo; braile <br>
+                &raquo; em relevo <br>
+                &raquo; portátil <br>
+                &raquo; imprimir <br>
+                &raquo; projeção &raquo;
+                &raquo; tela <br>
+                &raquo; discurso &raquo;
+                &raquo; tty <br>
+                &raquo; televisão <br>
+                </p>                
+                <p>
+                O tipo de mídia “todos” também pode ser usado para indicar que uma folha de estilo se aplica a todos os tipos de mídia.
+                </p>
+        </article>
+    </main>
+    <script>
+        function clickMenu() {
+            if (imenu.style.display == 'block') {
+                imenu.style.display = 'none'
+            } else {
+                imenu.style.display = 'block'
+            }
+        }
+    </script>    
+</body>
+</html>
